@@ -1,10 +1,54 @@
 <!DOCTYPE html>
+
+<html>
+<head>
+<style>
+* {text-align: center;
+   font-family: Verdana;}
+h1 {padding-top: 5%;}
+
+.button {
+  background-color: #DF7314; /* Red */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+</style>
+</head>
+<body>
+
 <html>
   <head>
     <title>RAPiD Issue Collector</title>
+    <script type="text/javascript" 		
+    		src="https://fusionbiotec.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/azc3hx/b/8/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=a4e18561"></script>
+  
+	<script type="text/javascript">             
+        window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+
+
+        // ==== custom trigger function ====
+        triggerFunction : function( showCollectorDialog ) {
+            $('#feedback-button').on( 'click', function(e) {
+                e.preventDefault();
+                showCollectorDialog();
+            });
+
+            // add any other custom triggers for the issue collector here
+        }
+	</script>
+    
   </head>
   <body>
-    <h1>RAPiD Issue Collector</h1>
-    <script type="text/javascript" src="https://fusionbiotec.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/azc3hx/b/8/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=a4e18561"></script>
+	<h1 class="center">RAPiD Issue Collector</h2>
+	<a class="button" href="#" id="feedback-button">Submit Bug Report</a>
+
+    
   </body>
 </html>
